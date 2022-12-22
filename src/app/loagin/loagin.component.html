@@ -1,0 +1,70 @@
+<!-- ================================================================================================
+                HttpClient get(), post(), put() and delete() metod with json server
+================================================================================================= -->
+<div class="container body p-5 rounded">
+    <div class="w-75 border border-2 border-dark rounded p-xxl-5 p-xl-5 p-sm-3 p-1 mx-auto form-body my-4 shadow">
+        <form #jsonform="ngForm">
+            <div class="text-center">
+                <i class="fa fa-user-circle-o fa-5x logo-box" aria-hidden="true"></i>
+            </div>
+            <div class="mb-3">
+                <label for="fullname1" class="form-label">Full Name</label>
+                <input type="email" class="form-control inputboxes" name="fullname" [(ngModel)]="usersobj.fullname"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label for="mobilenumber1" class="form-label">Mobile Number</label>
+                <input type="email" class="form-control inputboxes" name="mobilenumber"
+                    [(ngModel)]="usersobj.mobilenumber" required>
+            </div>
+            <div class="mb-3">
+                <label for="emailaddress1" class="form-label">Email address</label>
+                <input type="email" class="form-control inputboxes" name="emailaddress"
+                    [(ngModel)]="usersobj.emailaddress" required>
+            </div>
+            <div class="mb-3">
+                <label for="password1" class="form-label">Password</label>
+                <input type="password" class="form-control inputboxes" name="password" [(ngModel)]="usersobj.password"
+                    required>
+            </div>
+            <!-- ======== submit button ======== -->
+            <button class="btn btn-primary w-100 text-center" (click)="funconsole(jsonform.value); jsonform.reset();"
+                *ngIf="isEdit == false" [disabled]="!jsonform">submit</button>
+
+            <!-- ======== update buttton =========== -->
+            <button class="btn btn-warning w-100 text-center" (click)="updateuserdata()"
+                *ngIf="isEdit == true">Update</button>
+        </form>
+    </div>
+    <hr>
+
+    <!-- ========== table to display json server data =============== -->
+    <table class="table table-success table-hover mx-auto  w-75">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Full name</th>
+                <th scope="col">Mobile Number</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let users of usesrsdata">
+                <td>{{users.id}}</td>
+                <td>{{users.fullname}}</td>
+                <td>{{users.mobilenumber}}</td>
+                <td>{{users.emailaddress}}</td>
+                <td>{{users.password}}</td>
+                <td>
+                    <!-- ========= edit data button ========= -->
+                    <button class="btn btn-primary mx-2 btn-sm" (click)="editusersdata(users)">Edit</button>
+
+                    <!-- ========= delete data button ========= -->
+                    <button class="btn btn-danger mx-2 btn-sm" (click)="deleteusersdata(users)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

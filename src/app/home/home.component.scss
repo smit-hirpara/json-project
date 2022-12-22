@@ -1,0 +1,23 @@
+table {
+    margin: 10px;
+    width: 99%;
+    border: 1px solid gray;
+}
+th {
+    background-color: aqua;
+}
+// tr,th,td {
+//     border: 2px solid black;
+//     padding: 3px 10px;
+//     text-align: center;
+// }
+tr:hover {
+    background-color: rgb(204, 196, 196);
+}
+.header-text {
+    font-size: 2vw;
+}
+.left-sidebar ,.center-content ,.right-sidebar {
+    height: auto;
+}
+

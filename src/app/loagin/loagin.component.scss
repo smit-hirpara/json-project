@@ -1,0 +1,16 @@
+.body {
+    background-color: rgb(209, 208, 208);
+}
+.form-body {
+    background-color: white;
+}
+.logo-box {
+    box-shadow: 0 0px 50px 20px rgba(0, 0, 0, 0.2), 0 10px 20px 10px rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+}
+.inputboxes.ng-touched.ng-invalid  {
+    border:1px solid red;
+}
+.inputboxes.ng-touched.ng-valid  {
+    border:1px solid green;
+}

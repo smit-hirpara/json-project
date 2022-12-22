@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+// dynaimc component loader
+.left-sidebar {
+    width: 25%;
+    height: 75vh;
+}
+.center-content {
+    width: 50%;
+}
+.right-sidebar {
+    width: 25%;
+    height: 75vh;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

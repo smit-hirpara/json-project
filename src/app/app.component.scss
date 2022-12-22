@@ -1,0 +1,24 @@
+.navbar-links {
+    padding: 10px;
+    margin: 0 10px;
+    width: 12vw;
+    text-align: center;
+}
+.navbar-links:hover {
+    // background-color: rgb(255, 127, 244);
+    background-color: aquamarine;
+    color: black;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.navbar-logo {
+    font-size: 20px;
+}
+// .navbar-links-text {
+//     // text-shadow: 2px 2px #000000;
+// }
+@media screen and (max-width:991px) {
+    .navbar-links {
+        margin: 30px 0;
+    }
+}
