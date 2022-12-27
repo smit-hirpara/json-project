@@ -24,44 +24,9 @@
     {
       "fullname": "shivam hirpara",
       "mobilenumber": "1234567890",
-      "emailaddress": "sihvam123@test.com",
+      "emailaddress": "sihvam123@gamil.com",
       "password": "wuilnljknuigrs",
       "id": 2
-    },
-    {
-      "fullname": "utsav hirpara",
-      "mobilenumber": "5432109876",
-      "emailaddress": "utsav123@test.com",
-      "password": "nsoghjnzjkguhi",
-      "id": 3
-    },
-    {
-      "fullname": "meet rathod",
-      "mobilenumber": "2134567890",
-      "emailaddress": "meet123@test.com",
-      "password": "sprjgtiynbk",
-      "id": 4
-    },
-    {
-      "fullname": "xjn",
-      "mobilenumber": "xxdgvn",
-      "emailaddress": "gtcijkim",
-      "password": "fjkxfh",
-      "id": 5
-    },
-    {
-      "fullname": "yhfb",
-      "mobilenumber": "zddxtjgn",
-      "emailaddress": "xdtfjgm",
-      "password": "dxtgjum",
-      "id": 6
-    },
-    {
-      "fullname": "gjn",
-      "mobilenumber": "bc gjbm",
-      "emailaddress": "cg jm",
-      "password": "cgjmb",
-      "id": 7
     }
   ]
 }

@@ -11,5 +11,14 @@
     width: 25%;
     height: 75vh;
 }
+.header {
+    border-radius: 10px 10px 0 0;
+}
+.footer {
+    border-radius: 0 0 10px 10px;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

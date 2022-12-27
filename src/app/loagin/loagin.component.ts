@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FormserviceService } from '../formservice.service';
 
+
 @Component({
   selector: 'app-loagin',
   templateUrl: './loagin.component.html',
@@ -16,6 +17,8 @@ export class LoaginComponent implements OnInit {
 
   // ====== to change submit and update button
   isEdit = false;
+
+  // ===== to chnage shubmit and update to view 
 
   // ===== to display json server value in view
   usesrsdata: any;
@@ -64,8 +67,8 @@ export class LoaginComponent implements OnInit {
   // ====== delete users data from json server
   deleteusersdata(users: any) {
     this.service.deletusers(users).subscribe(() => {
-      alert("delete user successfully!");
       this.getusersdata();
+      alert("delete user successfully!");
     })
   }
 
@@ -74,6 +77,7 @@ export class LoaginComponent implements OnInit {
     this.isEdit = !this.isEdit;
     this.service.updateusers(this.usersobj).subscribe(() => {
       this.getusersdata();
+      alert("update user successfully!")
     })
   }
 

@@ -1,0 +1,89 @@
+<!-- <p class="bg-info p-2 m-2 w-100 text-center"><b>Fake-Compo Works!</b></p> -->
+<div class="container">
+    <div class="bg-secondary p-4 text-white text-center header">Fake-Compo Works!</div>
+    <div class="bg-secondary p-1 text-center">
+        <button class="btn btn-info" (click)="closeusers()">close this component</button>
+    </div>
+    <div class="d-flex">
+        <div class="bg-primary left-sidebar p-3">
+            <p>
+                <!-- === english === -->
+                whaat is router outlet:-
+                the router outlet is a placeholder that gets filled dynamically by angular, depending on the current
+                router.<br>
+                we'll see advanced uses if the router-outlet component such as named, multiple router-outlets and
+                auxiliary routing.<br>
+
+                how to create a named router-outlet:-<br>
+                we can create a named router-outlet usingthe name property of the router-outlet component:<br>
+                ex:- router-outlet name="outlet1" router-outlet<br>
+
+                you can have multiple router-outlet in the same template:<br>
+                the unnamed router-outlet is the primary outlet.<br>
+                except for the primary outlet, all other outlets nust have a name.<br>
+            </p>
+            <p>
+                <!-- === gujarati === -->
+                રાઉટર આઉટલેટ(router outlet) શું છે:-<br>
+                router outlet એ placeholder છે જે વર્તમાન router ના આધારે કોણીય રીતે ગતિશીલ રીતે ભરાય છે.<br>
+                અમે Advanced uses જોશું જો router-outlet ઘટક જેમ કે name, multiple router-outlets અને સહાયક રૂટીંગ.<br>
+
+                named router-outlet કેવી રીતે બનાવવું(create):-<br>
+                અમે router-outlet ઘટકની name પ્રોપર્ટીનો(property) use કરીને name વાળી router-outlet બનાવી(create) શકીએ
+                છીએ:<br>
+                ex:- router-outlet name="outlet1" router-outlet<br>
+
+                તમારી પાસે same template માં multiple router-outlet હોઈ શકે છે:<br>
+                unnamed router-outlet એ primary router-outlet છે.<br>
+                primary router-outlet સિવાય, અન્ય તમામ router-outlets નું નામ(name) છે.<br>
+            </p>
+        </div>
+        <div class="bg-warning center-content p-3">
+            <p>
+                <!-- === english === -->
+                a component has one primary route and zero or more auxiliary routers.., auxiliary routes allow you to
+                use and navigate multiple routes. to define an auxiliary route you need a named router outlet where the
+                component of the auxiliary route will be rendered.
+
+                named router-outlet will open as secondary route within a (). suppose we have opened a route with
+                unnamed outlet and then we visit a route that will open in named router-outlet, we will observe the path
+                on browser address bar thet both path exists there. the named outlet path is called secondary routes and
+                will open in (). secondary routes will be appended with unnamed router outlet path. all the open routes
+                using primary and named outlet will be activated when using routerLinkActive property.
+            </p>
+            <p>
+                <!-- === gujarati === -->
+                એક coponent માં એક primary route અને 0 અથવા વધુ auxiliary routers હોય છે.., auxiliary route તમને
+                multiple route નો use
+                અને નેવિગેટ(navigate) કરવાની મંજૂરી(allow) આપે છે. auxiliary route ને define કરવા માટે તમારે named
+                router-outlet ની જરૂર છે
+                જ્યાં auxiliary route ના component ને રેન્ડર(rendered) કરવામાં આવશે.
+
+                named router=outlet એ ()rounded-bracket ની અંદર secondary route તરીકે ખુલશે. ધારો કે આપણે unnnamed
+                router-outlet સાથેનો route ખોલ્યો છે
+                અને પછી આપણે auxiliary route મુલાકાત લઈએ છીએ જે named router-outlet માં ખુલશે, તો આપણે browser address
+                બાર પર
+                path નું નિરીક્ષણ(observe) કરીશું કે બંને પાથ ત્યાં અસ્તિત્વમાં(exists) છે. named router-outlet path ને
+                secondary route કહેવામાં આવે છે
+                અને તે ()rounded-bracket માં ખુલશે. unnamed router-outlet path ને primary route કહેવામાં આવે છે, unnamed
+                router-outlet path સાથે primary route જોડવામાં આવશે. routerLinkActive પ્રોપર્ટીનો(prperty)
+                use કરતી વખતે primary અને named router-outlet નો use કરીને તમામ ખુલ્લા path activated કરવામાં આવશે.
+            </p>
+            <ul *ngFor="let user of usersdetails | async" class="bg-info">
+                <li><b>user id:-</b> {{user.id}} === <b>user name:-</b> {{user.name}} === <b>user state:-</b> {{user.state}}</li>
+            </ul>
+        </div>
+        <div class="bg-primary right-sidebar p-3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quos dolorum recusandae impedit est
+                voluptatem dolore aspernatur obcaecati saepe eum, similique perspiciatis aliquam beatae blanditiis nam
+                ipsam deleniti ex repudiandae inventore harum dicta corrupti voluptas corporis! Aliquam, aperiam quis et
+                accusamus dolores tempora molestias, officiis placeat tempore cum iste quae ratione illum distinctio
+                laudantium cupiditate ex similique, hic eum voluptatem. Odio deleniti itaque corrupti excepturi sed
+                dolore in culpa sunt laudantium illum, ipsam voluptatem veritatis aliquid quas odit rem libero eius, a
+                eligendi temporibus repellendus delectus recusandae nesciunt. Id officia, perferendis placeat vitae
+                voluptate similique aliquid architecto. Doloribus, soluta eligendi.
+            </p>
+        </div>
+    </div>
+    <div class="bg-secondary p-4 text-center text-white footer">Footer</div>
+</div>

@@ -1,0 +1,152 @@
+<div class="container">
+    <div class="bg-warning p-4 text-white text-center header">Session-Management Component</div>
+    <div class="d-flex bg-warning p-1">
+        <!-- ===== change local storage localdata value ===== -->
+        <button class="btn btn-primary mx-1" (click)="changelocalstorage()">change local storage value</button>
+        
+        <!-- ===== change session storage sessiondata value ===== -->
+        <button class="btn btn-primary mx-1" (click)="changesessionstorage()">chnage session storage value</button>
+
+        <!-- ===== delete local storage localdata value ===== -->
+        <button class="btn btn-primary mx-1" (click)="deletelocalstorage()">delte local storage value</button>
+
+        <!-- ==== delete session storage sessiondata value ===== -->
+        <button class="btn btn-primary mx-1" (click)="deletesessionstorage()">delete session storage value</button>
+    </div>
+    <div class="d-flex bg-warning p-1">
+        <!-- ===== delete local storage all value ===== -->
+        <button class="btn btn-primary mx-1" (click)="deletealllocalstorage()">delete local storage all value</button>
+
+        <!-- ===== delete session storage all value ===== -->
+        <button class="btn btn-primary mx-1" (click)="deleteallsessionstorage()">delete sesion storage all vlaue</button>
+
+        <!-- ===== chack local storage data length ===== -->
+        <button class="btn btn-primary mx-1" (click)="chacklocalstorage()">chack local storage data</button>
+
+        <!-- ===== chack local storage supported ===== -->
+        <button class="btn btn-primary mx-1" (click)="checklocalstoragesupport()">chack local storage supported</button>
+    </div>
+    <div class="d-flex">
+        <div class="bg-secondary left-sidebar p-3">
+            <!-- ====================== what is session management ===================== -->
+            <p>
+                <!--===== engilsh ========-->
+                deffirent kind of storage space is avaliable for our data on client as well as server side, we can chose
+                any of then according to our need and level of transparency. we use html5 web storage to store data in
+                angular,
+                what is html web
+            </p>
+            <p>
+                <!-- ======= gujarati ====== -->
+                client side તેમજ server side બાજુના અમારા data માટે અલગ type storage/ space avliable છે, અમે અમારી
+                જરૂરિયાત અને according તેમાંથી કોઈપણ પસંદ કરી શકીએ છીએ. અમે angular data store કરવા માટે html5 web
+                storage use કરીએ છીએ,
+                web storage has two type (1)localstorage , (2)sessionstorage<br>
+            </p>
+            <p>
+                <!-- ======= engilsh ======= -->
+                what is session management:- It is the process of managing user sessions and ensuring that the user is
+                authenticated and authorized to access the application. In Angular, session management is handled by the
+                framework itself, but there are certain best practices that should be followed to ensure that the
+                application is secure and efficient.
+            </p>
+            <p>
+                <!-- ======= gujarati ======== -->
+                what is session management:- તે user pages નું management કરવાની અને ખાતરી કરવાની પ્રક્રિયા(process) છે
+                કે
+                user પ્રમાણિત છે અને application ને access કરવા માટે અધિકૃત(authorized) છે. angular માં, session
+                management framework
+                દ્વારા જ હાથ ધરવામાં આવે છે, પરંતુ application secure અને efficient છે તેની ખાતરી કરવા માટે કેટલીક
+                શ્રેષ્ઠ પદ્ધતિઓનું પાલન કરવું જોઈએ
+            </p>
+        </div>
+        <div class="bg-info center-content p-3">
+            <!-- =====================what is web storage ==========================-->
+            <!-- ===== engilsh ====== -->
+            <p>what is web storage:- HTML web storage provides two objects for storing data on the client:
+                (1):- window.localStorage - stores data with no expiration date.
+                (2):- window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)
+            </p>
+            <p>
+                <!-- ======= gujarati ====== -->
+                what is web storage:-
+                HTML web stoarage client side પર ડેટા store કરવા માટે બે objects પ્રદાન(provides ) કરે છે:
+                (1)window.localStorage - કોઈ expiration date વિના data store કરે છે.
+                (2)window.sessionStorage - એક session માટે data store કરે છે (brower tab બંધ(close) હોય ત્યારે data
+                ખોવાઈ(delete) જાય છે)
+            </p>
+            <!-- ======================what is local storage =============================-->
+            <p>
+                <!-- what is local storage:- The localStorage mechanism provides a type of web storage object that lets you
+                store and retrieve data in the browser. You can store and access data without expiration; the data will
+                be available even after a visitor closes your site. -->
+
+                <!-- local storage શું છે:- local storage mechanism web storage object નો એક પ્રકાર provides કરે છે જે તમને
+                browser માં data store અને retrieve કરવા દે છે. તમે expiration date વિના data store અને access કરી શકો છો;
+                user તમારી સાઇટ બંધ કરે પછી પણ data available રહેશે. -->
+            </p>
+            <p>
+                <!-- ===== english ===== -->
+                (1)what is localstorage :- with web storange , web applications can store data locally within the user's
+                browser,
+                before html5, application data had to be stored in cookies, included in every server request,
+                unlike cookies, the strorage limit is far larger at least 5mb and information is naver transferred to
+                the server.
+                web storage localstorage and sessionstorage offer advantages compared to using cookies,
+                the data is saved locally only and can't be read by the server, which eliminates the security issue that
+                cookies present.,
+                it allowed for much more data to be saved(10mb for most browsers).
+                web storage localstorage and sessionstorage offer advantages compared to using cookies,
+                the data is saved locally only and can't be read by the server, which eliminates the security issue that
+                cookies present.,
+                it allowed for much more data to be saved(10mb for most browsers).
+            </p>
+            <p>
+                <!-- =======  gujarati ======== -->
+                (1)what is localstorage :- web storage સાથે, web application user ના browser માં locally રીતે data store
+                કરી શકે છે,html5 પહેલા, application data દરેક server request incleded, cooki માં store કરવાનો હતો,
+                કૂકીઝથી વિપરીત, storage limit ઓછામાં ઓછી 5mb જેટલી મોટી છે અને information server પર transferred થઈ શકતી
+                નથી.
+                web storage local storage અને session storage cooki ના use ની તુલનામાં ફાયદા આપે છે,
+                data ફક્ત local રૂપે જ store આવે છે અને server દ્વારા વાંચી(read) શકાતો નથી, જે cookie પ્રસ્તુત security
+                issue દૂર કરે છે.,
+                તે ઘણા વધુ data ને સાચવવાની(store) મંજૂરી આપે છે (મોટા ભાગના borwser માટે 10mb).,
+                local storage અને session storage, web storage API નો એક ભાગ, key/value જોડીને locally રીતે store માટેના
+                બે શ્રેષ્ઠ સાધનો છે.,
+                તે સમાન syntex local storage અને session storage બંને માટે કામ કરે છે.,
+                local storage એ storage obaject ને access કરવા માટેની property છે, જેનો use user ના browser માંથી
+                data store કરવા અને retrieve કરવા માટે થાય છે. તે only client side પર જ accessible છે, cooki ની જેમ
+                server side પર નહીં.,
+                local storage માં data storage એ જ domain under તમામ pages accessible માનવામાં આવે છે, જ્યાં સુધી user
+                તેને manually કાઢી(delete) નાખે નહીં. ભલે user browser close કરે, પણ આગલી વખતે data accessible હશે.,
+            </p>
+        </div>
+        <div class="bg-secondary right-sidebar p-3">
+            <!-- ========================== what is session management =====================-->
+            <p>
+                <!-- what is session storage:- Session storage allows you to store data in the browser depending on the
+                system memory and the data stored in the browser until the browser is closed. In other words, closing
+                the browser will clear all the data stored in session storage. -->
+
+                <!-- session storage શું છે:- session storage તમને system memory અને browser બંધ(close) ન થાય ત્યાં સુધી browser માં
+                store data ના આધારે browser માં data store કરવાની મંજૂરી(allows) આપે છે. બીજા શબ્દોમાં કહીએ તો, browser બંધ(close)
+                કરવાથી session storage માં store તમામ data સાફ(delet) થઈ જશે. -->
+            </p>
+            <p>
+                <!-- ===== english ===== -->
+                (2)what is sessionstorage:- the sessionstorage object is equal to the localstoorage object, except that
+                it stores the data for only
+                one session. the data is deleted whtn user closes the specific browser tab
+            </p>
+            <!-- ===== gujarati ===== -->
+            <p>(2)what is session storage:-
+                session storage object local storage object ની બરાબર છે, સિવાય કે તે માત્ર એક session માટે data store
+                કરે છે.
+                જ્યારે user ચોક્કસ browser ટેબ close કરે છે ત્યારે data કાઢી(delete) નાખવામાં આવે છે
+            </p>
+        </div>
+    </div>
+    <div class="bg-warning p-4 text-center text-white footer">
+        Footer
+    </div>
+</div>

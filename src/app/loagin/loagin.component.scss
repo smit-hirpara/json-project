@@ -1,11 +1,15 @@
 .body {
     background-color: rgb(209, 208, 208);
 }
+.student-table {
+    box-shadow: 0 10px 50px 20px rgba(0, 0, 0, 0.2), 0 5px 25px 5px rgba(0, 0, 0, 0.5);
+}
 .form-body {
     background-color: white;
+    box-shadow: inset 0 20px 50px 30px rgba(0, 0, 0, 0.2), 0 20px 25px 5px rgba(0, 0, 0, 0.5);
 }
 .logo-box {
-    box-shadow: 0 0px 50px 20px rgba(0, 0, 0, 0.2), 0 10px 20px 10px rgba(0, 0, 0, 0.19);
+    box-shadow: 10px 10px 50px 20px rgba(0, 0, 0, 0.2), 0 20px 25px 5px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
 }
 .inputboxes.ng-touched.ng-invalid  {
@@ -13,4 +17,7 @@
 }
 .inputboxes.ng-touched.ng-valid  {
     border:1px solid green;
+}
+.inputbox-name {
+    font-weight: bold;
 }

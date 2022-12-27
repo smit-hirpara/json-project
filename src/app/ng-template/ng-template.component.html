@@ -1,0 +1,200 @@
+<div class="container">
+    <div class="bg-primary p-4 text-white text-center header">Ng Template Component</div>
+    <div class="d-flex">
+        <div class="bg-info left-sidebar p-3">
+            <p>
+                <!-- === english === -->
+                ng-template is an angular element for rendering HTML. it is never displayed directly. it cna be
+                displayed using structural directive that we use all the time: ngif, ngfor and ngswitch., <br>
+
+                befor rendering html, angular replaces ng-template with a comment. ng-template can be used with
+                structural directive, viewcontainerref etc.,<br>
+
+                if you put some html inside of an ng-template tag, it not won't be on the screen but it won't be in the
+                DOM either. angular will replace the ng-template tag and its contents with a comment. the key is that
+                ng-template will only be displayed if used in partnership with a structural directive.,<br>
+            </p>
+            <p>
+                <!-- === gujarati === -->
+                ng-template એ HTML rendering કરવા માટેનું angular element છે. તે ક્યારેય directly display થતું નથી.
+                structural directive કે જેનો અમે હંમેશા use કરીએ છીએ: ngif, ngfor અને ngswitch, તેનો use કરીને display
+                કરી શકાય છે,<br>
+
+                html render કરવા માટે, angular ng-template ને comment સાથે બદલે(replace) છે. ng-template નો ઉપયોગ(use)
+                structural directive, viewcontainerref વગેરે સાથે કરી શકાય છે.,<br>
+
+                જો તમે ng-template tag ની અંદર અમુક html નાખો(put) છો, તો તે સ્ક્રીન(screen) પર નહીં હોય પરંતુ તે
+                DOM(document object model) માં પણ નહીં
+                હોય. angular ng-templatetag અને તેના contents ને comment સાથે બદલશે. મુખ્ય બાબત એ છે કે ng-template
+                માત્ર
+                ત્યારે જ display થશે જો તેનો ઉપયોગ structural directive સાથે partnership માં કરવામાં આવે.,<br>
+            </p>
+        </div>
+        <div class="bg-warning center-content p-3">
+            <p>
+                <!-- === english === -->
+                a rendered ng-template doesn't itself get turned info a DOM element, only the contents are rendered to
+                the DOM.,<br>
+
+                ng-template is a virtual element and its contents are displayed only when needed(based on
+                conditions).,<br>
+
+                ng-template should be used along with structural directives like ngif, ngfor,ngswitch or custom
+                structural directives.,<br>
+
+                ng-template never meant to be used like other html elements. it's an internal implementation of
+                angular's structural directives.,<br>
+
+                when you use a structural directive in angular we will add a prefix asterisk(*) brfore the directive
+                name, this asterisk is short hand notation for ng-template.,<br>
+
+                whenever angular encounter with the astrisk(*) symbol, we are informing angular saying thet it is a
+                structural directve and angular will convort directive attribute to ng-template element.,<br>
+
+                ng-template is not exactly a true web element. when we compile our code, we will not see a ng-template
+                tag in html DOM.,<br>
+
+                nagular will evaluate the ng-template element to convort it into a comment section in html DOM. <br>
+
+                we woll se below example one by one :- <br>
+                (1). use ng-template in angular <br>
+                (2). using ng-template with *ngIf <br>
+                (3). using ng-template with *ngFor <br>
+                (4). using ng-template with ngSwitch <br>
+
+            </p>
+            <p>
+                <!-- === gujarati === -->
+                render કરેલ ng-template પોતે DOM(document object model) element ની information મેળવતું નથી, ફક્ત
+                contents જ DOM ને render કરવામાં આવે છે,<br>
+
+                ng-template એ વર્ચ્યુઅલ(virtual) element છે અને તેની contents માત્ર ત્યારે જ display થાય છે જ્યારે જરૂર
+                હોય (based on conditions).,<br>
+
+                ng-template નો use ngIf, ngFor, ngSwitch અથવા custom structural directives જેવા structural directives
+                સાથે થવો જોઈએ.,<br>
+
+                ng-template નો અર્થ ક્યારેય અન્ય HTML element જેમ ઉપયોગ કરવાનો નથી. તે angular ના structural directives
+                નું internal implementation છે.,<br>
+
+                જ્યારે તમે structural directives નો angular માં use કરો છો ત્યારે અમે directive ની આગળ એક prefix
+                ફૂદડી(asterisk,substar,multiplication)(*) ઉમેરીશું
+                નામ, આ ફૂદડી એ ng-template માટે short hand સંકેત(notation) છે.,<br>
+
+                જ્યારે પણ (asterisk,substar,multiplication)(*) symbol સાથે angular સામસામે(encounter) આવે છે, ત્યારે અમે
+                angular ને
+                જાણ(informing) કરીએ છીએ કે તે એ છે
+                structural directive અને angular ng-template element માટે directive attribute ને convort કરશે.,<br>
+
+                ng-template એ exactly web element નથી. જ્યારે આપણે આપણો code compile કરીએ છીએ, ત્યારે આપણને html DOM માં
+                ng-template tag દેખાશે નહીં.,<br>
+
+                angular ng-template element નું મૂલ્યાંકન(evaluation) કરીને તેને html DOM માં comment section માં
+                રૂપાંતરિત(convort) કરશે. <br>
+
+                અમે એક પછી એક ઉદાહરણ(example) નીચે જોઈશું. :- <br>
+                (1). use ng-template in angular <br>
+                (2). using ng-template with *ngIf <br>
+                (3). using ng-template with *ngFor <br>
+                (4). using ng-template with ngSwitch <br>
+            </p>
+        </div>
+        <div class="bg-info right-sidebar p-3">
+            <!-- ========================================================================================================================================
+                                                                ng-template with ngif statement
+            ========================================================================================================================================= -->
+            <!-- =======================================================
+                        ng-template with ngif
+            ======================================================== -->
+            <!-- ============== if display variable value is true when display (display value is true)  =============== -->
+            <!-- <div *ngIf="display" class="bg-success p-1 m-1 text-center rounded">dispaly value = true</div> -->
+
+            <!-- ============ if display variable value us true when display(display value is true) ============== -->
+            <!-- <ng-template [ngIf]="display">
+                <div class="bg-success m-1 m-1 text-center rounded">display value = true</div>
+            </ng-template> -->
+
+
+            <!-- =======================================================
+                        ng-template with ngif and else
+            ======================================================== -->
+            <!-- ============ if variable (b) value is smit when display (variable b = smit:true) then display (variable b = smit: Flase) ========== -->
+            <!-- <div *ngIf="b == 'smit'; else elseblock" class="bg-success p-1 m-1 text-center rounded">
+                variable b = smit: True
+            </div>
+            <ng-template #elseblock>
+                <div class="bg-danger p-1 m-1 text-center rounded">variable b = smit: Flase</div>
+            </ng-template> -->
+
+            <!-- =========================================================
+                        ng-template with ngif, then and else
+            ========================================================== -->
+            <!-- =============== if variable (a) value lessthan 15 when display ifblock1 and variable (a) value graterthan 15 when display elseblock1 =============== -->
+            <!-- <div *ngIf="a < 15; then ifblock1; else elseblock1"></div>
+            <ng-template #ifblock1>
+                <div class="bg-success p-1 m-1 text-center rounded">variable a lessthen 15 = True</div>
+            </ng-template>
+            <ng-template #elseblock1>
+                <div class="bg-danger p-1 m-1 text-center rounded">variable a lessthen 15 = False</div>
+            </ng-template> -->
+
+            <!-- ================ if variable (b) value is smit when displat ifbloack2 and variable (b) value is not smit when display elseblock2  =============== -->
+            <!-- <div *ngIf="b == 'smit'; then ifblock2; else elseblock2"></div>
+            <ng-template #ifblock2>
+                <div class="bg-success p-1 m-1 text-center rounded">variable b = smit = True</div>
+            </ng-template>
+            <ng-template #elseblock2>
+                <div class="bg-danger p-1 m-1 text-center rounded">variable b = smit = Flase</div>
+            </ng-template>
+            <br> -->
+
+
+            <!-- ================================================================================================================================
+                                                        ng-template with ngFor statement
+            ================================================================================================================================= -->
+            <!-- ============ ngfor with div ============ -->
+            <!-- <div class="bg-danger p-1 m-1 text-center text-white rounded">ngIf with div tag</div>
+            <div *ngFor="let usersdetails of users; let id=index" class="bg-primary p-2 m-1 rounded">
+                id:-{{id + 1}}, name:- {{usersdetails.name}}, class:-{{usersdetails.class}}, age:- {{usersdetails.age}}
+            </div>
+            <br> -->
+
+            <!-- ============= ngfor with ng-template ============== -->
+            <!-- <div class="bg-danger p-1 m-1 text-center text-white rounded">ngIf with div tag</div>
+            <ng-template ngFor let-usersdetails [ngForOf]="users" let-id="index">
+                <ul class="list-group">
+                    <li class="bg-primary p-1 m-1 rounded list-group-item">id:- {{id + 1}}, name:-
+                        {{usersdetails.name}}, class:- {{usersdetails.class}}, age:- {{usersdetails.age}}
+                    </li>
+                </ul>
+            </ng-template>
+            <br> -->
+
+
+
+            <!-- ================================================================================================================================
+                                                            ng-template with ngswitch statement
+            ================================================================================================================================= -->
+            <!-- ===================== ngswitch with ng=template ==================== -->
+            <div [ngSwitch]="'angular'" class="bg-primary text-center p-1 m-1 rounded">
+                <p *ngSwitchCase="'html'">HTML (Hyper Text Marckup Language)</p>
+                <p *ngSwitchCase="'css'">CSS (Cascadig Style Shit)</p>
+                <p *ngSwitchCase="'javascript'">jAVASCRIPT</p>
+                <p *ngSwitchCase="'jquery'">JQUERY</p>
+                <p *ngSwitchCase="'angular'">ANGULAR</p>
+                <p *ngSwitchDefault>HTML (Hyper Text Marckup Language)</p>
+            </div>
+
+            <!-- =================== ngswitch with ng-template ===================== -->
+            <div [ngSwitch]="input" class="bg-primary p-1 m-1 text-center rounded">
+                <ng-template [ngSwitchCase]="'html'"><p>HTML (Hyper Text Marckup Language)</p></ng-template>
+                <ng-template [ngSwitchCase]="'css'"><p>CSS (Cascadig Style Shit)</p></ng-template>
+                <ng-template [ngSwitchCase]="'javascript'"><p>jAVASCRIPT</p></ng-template>
+                <ng-template [ngSwitchCase]="'jquery'"><p>JQUERY</p></ng-template>
+                <ng-template [ngSwitchCase]="'angular'"><p>ANGULAR</p></ng-template>
+                <ng-template ngSwitchDefault>HTML (Hyper Text Marckup Language)</ng-template>
+            </div>
+        </div>
+    </div>
+    <div class="bg-primary p-4 text-center text-white footer">Footer</div>
+</div>

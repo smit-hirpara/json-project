@@ -1,11 +1,11 @@
 <!--========================
         component navbar 
 ==========================-->
-<div class="container">
-    <nav class="navbar navbar-expand-lg bg-primary navbar-dark mb-3">
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-xxl bg-primary navbar-dark mb-3 rounded-pill">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            <h1 class="navbar-brand ms-2">Navbar</h1>
+            <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -14,18 +14,87 @@
             </button> -->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto me-auto">
+                    <!-- ============ home component link ============== -->
                     <a class="nav-link navbar-links" [routerLink]="['/home']" href="#">
                         <span><i class="fa fa-home navbar-logo" aria-hidden="true"></i></span>
                         <span class="mx-2 navbar-links-text">Home Component</span>
                     </a>
+                    <!-- =========== about comonent link =============== -->
                     <a class="nav-link navbar-links" [routerLink]="['/about']" href="#">
                         <span><i class="fa fa-info-circle navbar-logo" aria-hidden="true"></i></span>
                         <span class="mx-2 navbar-links-text">About Component</span>
                     </a>
+                    <!-- ========== contact component link ============= -->
                     <a class="nav-link navbar-links" [routerLink]="['/contact']" href="#">
                         <span><i class="fa fa-phone navbar-logo" aria-hidden="true"></i></span>
                         <span class="mx-2 navbar-links-text">Contact Component</span>
                     </a>
+                    <!-- =========== sission management components dropdown links ============ -->
+                    <li class="nav-item navabr-dropdown dropdown">
+                        <a class="nav-link dropdown-btn dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span><i class="fa fa-envelope-open navbar-logo" aria-hidden="true"></i></span>
+                            <span class="mx-2 navbar-links-text">Sission Management Components</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li class="deopdown-links">
+                                <a class="nav-link bg-primary rounded" [routerLink]="['/sessionmanagement']" href="#">
+                                    <span><i class="fa fa-envelope-open navbar-logo" aria-hidden="true"></i></span>
+                                    <span class="mx-2 navbar-links-text">Sission management</span>
+                                </a>
+                            </li>
+                            <li class="deopdown-links">
+                                <a class="nav-link bg-primary rounded" [routerLink]="['/sessionmanagement2']" href="#">
+                                    <span><i class="fa fa-envelope-open navbar-logo" aria-hidden="true"></i></span>
+                                    <span class="mx-2 navbar-links-text">Sission management 2</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- ========== auxiliary routes dropdown ============ -->
+                    <li class="nav-item navabr-dropdown dropdown">
+                        <a class="nav-link dropdown-btn dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span><i class="fa fa-bandcamp navbar-logo" aria-hidden="true"></i></span>
+                            <span class="mx-2 navbar-links-text">Auxiliary Routes comp</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li class="deopdown-links">
+                                <a class="nav-link bg-primary rounded" [routerLink]="['/auxiliaryroutes']" href="#">
+                                    <span><i class="fa fa-bandcamp navbar-logo" aria-hidden="true"></i></span>
+                                    <span class="mx-2 navbar-links-text">Auxiliary Route</span>
+                                </a>
+                            </li>
+                            <li class="deopdown-links">
+                                <a class="nav-link bg-primary rounded"
+                                    [routerLink]="[{outlets:{userlist:['auxiliaryroutes2']}}]" href="#">
+                                    <span><i class="fa fa-bandcamp navbar-logo" aria-hidden="true"></i></span>
+                                    <span class="mx-2 navbar-links-text">Auxiliary Routes 2</span>
+                                </a>
+                            </li>
+                            <li class="deopdown-links">
+                                <a class="nav-link bg-primary rounded"
+                                    [routerLink]="[{outlets:{userlist:['ngtemplate']}}]" href="#">
+                                    <span><i class="fa fa-empire navbar-logo" aria-hidden="true"></i></span>
+                                    <span class="mx-2 navbar-links-text">ng template</span>
+                                </a>
+                            </li>
+                            <li class="deopdown-links">
+                                <a class="nav-link bg-primary rounded"
+                                    [routerLink]="[{outlets:{userlist:['ngcontainer']}}]" href="#">
+                                    <span><i class="fa fa-contao navbar-logo" aria-hidden="true"></i></span>
+                                    <span class="mx-2 navbar-links-text">ng container</span>
+                                </a>
+                            </li>
+                            <li class="deopdown-links">
+                                <a class="nav-link bg-primary rounded"
+                                    [routerLink]="[{outlets:{userlist:['fakeauxiliaryroutes']}}]" href="#">
+                                    <span><i class="fa fa-bandcamp navbar-logo" aria-hidden="true"></i></span>
+                                    <span class="mx-2 navbar-links-text">fake compo</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <a class="nav-link navbar-links" [routerLink]="['/login']" href="#">
                         <span><i class="fa fa-user-circle navbar-logo" aria-hidden="true"></i></span>
                         <span class="mx-2 navbar-links-text">Log in</span>
@@ -35,34 +104,91 @@
         </div>
     </nav>
 </div>
-<!-- offcanvas -->
+<!-- ======================= offcanvas ==============================  -->
 <div class="offcanvas offcanvas-start text-bg-success" id="demo">
     <div class="offcanvas-header">
         <h1 class="offcanvas-title">Components</h1>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body">
-        <a class="nav-link navbar-links" [routerLink]="['/home']" href="#">
+        <a class="nav-link navbar-links" [routerLink]="['/home']" href="#" data-bs-dismiss="offcanvas">
             <span><i class="fa fa-home navbar-logo" aria-hidden="true"></i></span>
             <span class="mx-2 navbar-links-text">Home Component</span>
         </a>
-        <a class="nav-link navbar-links" [routerLink]="['/about']" href="#">
+        <a class="nav-link navbar-links" [routerLink]="['/about']" href="#" data-bs-dismiss="offcanvas">
             <span><i class="fa fa-info-circle navbar-logo" aria-hidden="true"></i></span>
             <span class="mx-2 navbar-links-text">About Component</span>
         </a>
-        <a class="nav-link navbar-links" [routerLink]="['/contact']" href="#">
+        <a class="nav-link navbar-links" [routerLink]="['/contact']" href="#" data-bs-dismiss="offcanvas">
             <span><i class="fa fa-phone navbar-logo" aria-hidden="true"></i></span>
             <span class="mx-2 navbar-links-text">Contact Component</span>
         </a>
-        <a class="nav-link navbar-links" [routerLink]="['/login']" href="#">
+        <a class="nav-link navbar-links" [routerLink]="['/sessionmanagement']" href="#" data-bs-dismiss="offcanvas">
+            <span><i class="fa fa-envelope-open navbar-logo" aria-hidden="true"></i></span>
+            <span class="mx-2 navbar-links-text">Sission management</span>
+        </a>
+        <a class="nav-link navbar-links" [routerLink]="['/sessionmanagement2']" href="#" data-bs-dismiss="offcanvas">
+            <span><i class="fa fa-envelope-open navbar-logo" aria-hidden="true"></i></span>
+            <span class="mx-2 navbar-links-text">Sission management 2</span>
+        </a>
+        <!-- <li class="nav-item navbar-links dropdown deopdown-list">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span><i class="fa fa-envelope-open navbar-logo" aria-hidden="true"></i></span>
+                <span class="mx-2 navbar-links-text">Sission Management Components</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                    <a class="nav-link navbar-links" [routerLink]="['/sessionmanagement']" href="#">
+                        <span><i class="fa fa-envelope-open navbar-logo" aria-hidden="true"></i></span>
+                        <span class="mx-2 navbar-links-text">Sission management</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link navbar-links" [routerLink]="['/sessionmanagement2']" href="#">
+                        <span><i class="fa fa-envelope-open navbar-logo" aria-hidden="true"></i></span>
+                        <span class="mx-2 navbar-links-text">Sission management 2</span>
+                    </a>
+                </li>
+            </ul>
+        </li> -->
+        <a class="nav-link navbar-links" [routerLink]="['/auxiliaryroutes']" href="#" data-bs-dismiss="offcanvas">
+            <span><i class="fa fa-bandcamp navbar-logo" aria-hidden="true"></i></span>
+            <span class="mx-2 navbar-links-text">Auxiliary Routes</span>
+        </a>
+        <!--  ====================== auxiliary routes link ======================= -->
+        <a class="nav-link navbar-links" [routerLink]="[{outlets:{userlist:['auxiliaryroutes2']}}]" href="#" data-bs-dismiss="offcanvas">
+            <span><i class="fa fa-bandcamp navbar-logo" aria-hidden="true"></i></span>
+            <span class="mx-2 navbar-links-text">Auxiliary Routes 2</span>
+        </a>
+        <a class="nav-link navbar-links" [routerLink]="[{outlets:{userlist:['ngtemplate']}}]" href="#" data-bs-dismiss="offcanvas">
+            <span><i class="fa fa-empire navbar-logo" aria-hidden="true"></i></span>
+            <span class="mx-2 navbar-links-text">ng template</span>
+        </a>
+        <a class="nav-link navbar-links" [routerLink]="[{outlets:{userlist:['ngcontainer']}}]" href="#" data-bs-dismiss="offcanvas">
+            <span><i class="fa fa-contao navbar-logo" aria-hidden="true"></i></span>
+            <span class="mx-2 navbar-links-text">ng container</span>
+        </a>
+        <!--  ====================== auxiliary routes link ======================= -->
+        <a class="nav-link navbar-links" [routerLink]="[{outlets:{userlist:['fakeauxiliaryroutes']}}]" href="#" data-bs-dismiss="offcanvas">
+            <span><i class="fa fa-bandcamp navbar-logo" aria-hidden="true"></i></span>
+            <span class="mx-2 navbar-links-text">fake compo</span>
+        </a>
+        <a class="nav-link navbar-links" [routerLink]="['/login']" href="#" data-bs-dismiss="offcanvas">
             <span><i class="fa fa-user-circle navbar-logo" aria-hidden="true"></i></span>
             <span class="mx-2 navbar-links-text">Log in</span>
         </a>
     </div>
 </div>
 
-
-<router-outlet></router-outlet>
+<!-- <div class="router-group">
+    <div class="router-outlet-1"> -->
+        <router-outlet></router-outlet>
+    <!-- </div> -->
+    <!-- <div class="router-outlet-2"> -->
+        <router-outlet name="userlist"></router-outlet>
+    <!-- </div> -->
+<!-- </div> -->
 
 
 

@@ -1,0 +1,127 @@
+<div class="container">
+    <div class="bg-info p-4 text-white text-center header">Ng Container Component</div>
+    <div class="d-flex">
+        <div class="bg-primary left-sidebar p-3">
+            <!-- === english === -->
+            <p>ng-container is an element that's avaliable in angular 2+</p>
+            <p>ng-container is a logical container that can be used to group nodes but is not rendered in the DOM tree
+                as a node. ng-container is rendered as an HTML comment.</p>
+            <p>in order to avoid having to create that extra div, we can instead use ng-container directive.</p>
+            <p>ng-container is an angular grouping element that is similar to ng-template in that it doesn't represent a
+                DOM element. the difference is that it will always be rendered, whereas an ng-template will only be
+                rendered if it is explicitly requested. ng-container are useful anywhere you need an extra container for
+                some template element, but don't want to (or can't) create a container such as a div to hold them with
+                due to syntax or.</p>
+            <!-- === gujarati === -->
+            <p>ng-container એ એક તત્વ(element) છે જે angular 2+ માં ઉપલબ્ધ(avaliable) છે.</p>
+            <p>ng-container એ logical container છે જેનો ઉપયોગ(use) નોડ્સ(nodes) ને જૂથ(group) બનાવવા માટે કરી શકાય છે
+                પરંતુ DOM tree માં રેન્ડર(render) કરવામાં આવતું નથી.</p>
+            <p>તે વધારાની div element બનાવવા(create) નું ટાળવા(avoid) માટે, અમે તેના બદલે ng-container directive નો
+                ઉપયોગ(use) કરી શકીએ છીએ.</p>
+            <p>bg-contaqiner એ angular જૂથીકરણ(grouping) element છે જે ng-template જેવું જ છે જેમાં તે કોઈનું
+                પ્રતિનિધિત્વ(represent) કરતું નથી
+                DOM તત્વ. difference એ છે કે તે હંમેશા DOM માં રેન્ડર(render) કરવામાં આવશે, જ્યારે ng-template જ હશે
+                જો તે સ્પષ્ટપણે(Clearly) વિનંતી(requested) કરવામાં આવે તો રેન્ડર(render) કરવામાં આવે છે. તમને જ્યાં પણ
+                વધારાના(extra) કન્ટેનર(container) ની જરૂર હોય ત્યાં ng-container ઉપયોગી(usable) છે,
+                કેટલાક template element, પરંતુ(but) તેઓને પકડી(hold) રાખવા માટે div જેવા કન્ટેનર(container)
+                બનાવવા(create) માંગતા નથી (અથવા કરી શકતા
+                નથી).</p>
+        </div>
+        <div class="bg-secondary center-content p-3">
+            <!-- === english === -->
+            <p>for example it is not allowed in angular to put two structural directives on the same element. if you
+                needed to loop through an array and display a tr for each element, but only if a different condition was
+                met, you may want to put both an *ngFor and *ngIF on the tr element. angular does not allow this,
+                however, and wrapping the tr in a div to hold one of the structural directives is not valid HTML. the
+                utility of ng-container shines here, where we can use the ng-container to hold a structural directive
+                and contain the tr sopan without breaking the HTML layout.</p>
+            <!-- === gujarati === -->
+            <p>ઉદાહરણ તરીકે, એક જ element પર બે(two) structural directives મૂકવા માટે angular માં મંજૂરી(allowed) નથી.
+                જો તમે array દ્વારા લૂપ(loop) કરવા અને દરેક ઘટક(Ingredient) માટે એક tr પ્રદર્શિત(display) કરવાની જરૂર
+                છે, પરંતુ(but) માત્ર જો કોઈ
+                different condition હોય મળ્યા, તમે tr element પર *ngFor અને *ngIF બંને મૂકવા(use) માગી શકો છો. angular
+                આને મંજૂરી(allowed) આપતું નથી,
+                જો કે, અને structural directives માંથી એકને પકડી(hold) રાખવા માટે tr ને div માં લપેટીને(wrapping)
+                માન્ય(valid) HTML નથી.
+                આ ng-container ની ઉપયોગિતા(used) અહીં ચમકે(shines) છે, જ્યાં આપણે structural directive રાખવા માટે
+                ng-container નો ઉપયોગ(use) કરી
+                શકીએ છીએ
+            </p>
+        </div>
+        <div class="bg-primary right-sidebar p-3">
+            <!-- ==========================================================================================================================
+                                                        ng container examples
+            =========================================================================================================================== -->
+            <!-- ================ ng container =============== -->
+            <p class="bg-warning p-1 rounded text-center">ng container example</p>
+            <ng-container>ng container example</ng-container>
+            <br>
+            <br>
+
+            <!-- =============== ng-container example with multiple structural directive ============= -->
+            <p class="bg-warning p-1 rounded text-center">ng container with nultiple structural directive</p>
+            <table class="bg-info rounded">
+                <tbody>
+                    <ng-container *ngFor="let usersdetails of users; let id=index">
+                        <!-- ========== id > 1 display all names ============ -->
+                        <tr *ngIf="id >= 1">
+                            {{usersdetails.name}}
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+            <br>
+
+            <!-- ========= multiple structural directive with div tag ========== -->
+            <p class="bg-warning p-1 rounded text-center">multiple structural directive with div tag</p>
+            <div *ngIf="display">
+                <div *ngFor="let usersdetails of users; let id=index" class="bg-info rounded p-2 text-center">
+                    id:- {{id + 1}}, name:- {{usersdetails.name}}, class:- {{usersdetails.class}}, age:-
+                    {{usersdetails.age}}
+                </div>
+            </div>
+            <br>
+
+            <!-- ========= multiple structural directive with ng-container ========= -->
+            <p class="bg-warning p-1 rounded text-center">multiple structural directive with ng-container</p>
+            <ng-container *ngIf="display">
+                <div *ngFor="let usersdetails of users; let id=index" class="bg-info rounded p-2 text-center">
+                    id:- {{id+1}}, name:-{{usersdetails.name}}, class:- {{usersdetails.class}}, age:-
+                    {{usersdetails.age}}
+                </div>
+            </ng-container>
+            <br>
+
+            <!-- ======== multiple structural directive with multiple ng-container ========= -->
+            <p class="bg-warning p-1 text-center rounded">multiple structural directive with multiple ng-container</p>
+            <ng-container *ngIf="display2==true; else error">
+                <ng-container *ngFor="let usersdetails of users; let id=index">
+                    <p class="bg-info p-1 rounded">
+                        id:- {{id+1}}, name:-{{usersdetails.name}}, class:- {{usersdetails.class}}, age:- {{usersdetails.age}}
+                    </p>
+                </ng-container>
+            </ng-container>
+            <ng-template #error>
+                <p class="text-danger"><b>Opps: somthin wont worng</b></p>
+            </ng-template>
+            <div class="d-flex mb-3">
+                <button class="btn btn-danger w-50 mx-1" (click)="changedisplay2()">change display2 value</button>
+                <button class="btn btn-danger w-50 mx-1" (click)="setdisplay2()">set display2 value</button>
+            </div>
+
+            <!-- ========= multiple structural directive with unorder list and ng-container =========== -->
+            <p class="bg-warning p-1 text-center rounded">multiple structural directive with unorederlist and ng-container</p>
+            <ul>
+                <ng-container *ngFor="let usersdetails of users; let id=index">
+                    <li *ngIf="display3" class="bg-info p-1 rounded">id:- {{id+1}}, name:-{{usersdetails.name}}, class:- {{usersdetails.class}}, age:- {{usersdetails.age}}</li>
+                </ng-container>
+            </ul>
+
+            <!-- ============ ng-container and ng-template ============== -->
+            <p class="bg-warning p-1 text-center rounded">ng-container and ng-template</p>
+            <ng-container *ngTemplateOutlet="template; context:usersobj"></ng-container>
+            <ng-template #template let-user="user1">ng template content:- {{user}}</ng-template>
+        </div>
+    </div>
+    <div class="bg-info p-4 text-center text-white footer">Footer</div>
+</div>
